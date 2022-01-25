@@ -22,5 +22,5 @@ function handelTask(task){
 }
 
 function handelDelete(){
-  document.querySelector('#tasks').remove()
+  document.querySelector('li').parentNode.remove()
 }
