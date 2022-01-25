@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
- let form= document.querySelector('form').addEventListener('submit', (e) => {
+ let form= document.querySelector('form')
+ form.addEventListener('submit', (e) => {
   e.preventDefault();
   handelTask(document.querySelector('#new-task-description').value)
+  form.reset();
   
  })
   
@@ -21,6 +23,6 @@ function handelTask(task){
   console.log(p)
 }
 
-function handelDelete(){
-  document.querySelector('li').parentNode.remove()
+function handelDelete(e){
+  e.target.parentNode.parentNode.remove()
 }
